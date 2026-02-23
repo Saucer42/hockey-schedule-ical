@@ -18,7 +18,6 @@ your calendar URL will be:
 
 ```
 https://saucer42.github.io/hockey-schedule-ical/hockey_schedule.ics
-
 ```
 
 ### Apple Calendar (macOS / iOS)
