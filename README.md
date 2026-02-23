@@ -17,7 +17,8 @@ Once you have pushed this repo to GitHub and enabled GitHub Pages (see below),
 your calendar URL will be:
 
 ```
-https://<your-github-username>.github.io/<repo-name>/hockey_schedule.ics
+https://saucer42.github.io/hockey-schedule-ical/hockey_schedule.ics
+
 ```
 
 ### Apple Calendar (macOS / iOS)
