@@ -10,6 +10,7 @@ Strategy:
 """
 
 import asyncio
+import json
 import re
 import sys
 import uuid
@@ -21,20 +22,21 @@ from icalendar import Calendar, Event
 from playwright.async_api import async_playwright
 
 # ---------------------------------------------------------------------------
-# Configuration
+# Configuration — edit config.json to change these settings, not this file
 # ---------------------------------------------------------------------------
 
-TEAM_PAGE_URL = (
-    "https://www.truenorthhockey.com/Stats/StatsTeamStats?divteamID=736"
-)
-SCHEDULE_ENDPOINT = "/Schedule/GetTeamScheduleGrid"
+_CONFIG_FILE = Path(__file__).parent / "config.json"
+with _CONFIG_FILE.open() as _f:
+    _cfg = json.load(_f)
 
-TEAM_NAME = "Beavers"
-EASTERN_TZ = ZoneInfo("America/Toronto")
-GAME_DURATION_HOURS = 1
+TEAM_PAGE_URL       = _cfg["team_page_url"]
+TEAM_NAME           = _cfg["team_name"]
+GAME_DURATION_HOURS = int(_cfg["game_duration_hours"])
+SCHEDULE_ENDPOINT   = "/Schedule/GetTeamScheduleGrid"
+EASTERN_TZ          = ZoneInfo("America/Toronto")
 
-OUTPUT_DIR = Path("docs")
-OUTPUT_FILE = OUTPUT_DIR / "hockey_schedule.ics"
+OUTPUT_DIR  = Path(_cfg["output_file"]).parent
+OUTPUT_FILE = Path(_cfg["output_file"])
 
 
 # ---------------------------------------------------------------------------

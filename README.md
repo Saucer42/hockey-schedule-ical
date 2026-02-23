@@ -1,5 +1,7 @@
 # Beavers Hockey Calendar
 
+> **New to this project?** See [HOWTO.md](HOWTO.md) for a plain-English guide that explains how everything works without requiring any coding knowledge.
+
 Automatically scrapes the **Beavers** team schedule from
 [True North Hockey](https://www.truenorthhockey.com/Stats/StatsTeamStats?divteamID=736)
 and publishes a subscribable iCal (`.ics`) feed via GitHub Pages.
@@ -103,10 +105,12 @@ Requires Python 3.11+.
 
 ## Customisation
 
-| Setting | Location | Default |
+All user-editable settings live in **`config.json`** at the project root. Edit that file — not `scraper.py`.
+
+| Setting | Key in `config.json` | Default |
 |---|---|---|
-| Team name displayed in event titles | `scraper.py` → `TEAM_NAME` | `Beavers` |
-| Source page URL | `scraper.py` → `TEAM_PAGE_URL` | True North Hockey team page |
-| Game duration | `scraper.py` → `GAME_DURATION_HOURS` | `1` hour |
-| Workflow schedule | `update_calendar.yml` → `cron` | `0 7 * * *` (2 AM ET) |
-| Output file name | `scraper.py` → `OUTPUT_FILE` | `docs/hockey_schedule.ics` |
+| Team name displayed in event titles | `team_name` | `Beavers` |
+| Source page URL (update each season) | `team_page_url` | True North Hockey team page |
+| Game duration | `game_duration_hours` | `1` hour |
+| Output file name | `output_file` | `docs/hockey_schedule.ics` |
+| Workflow run time | `update_calendar.yml` → `cron` | `0 7 * * *` (2 AM ET) |

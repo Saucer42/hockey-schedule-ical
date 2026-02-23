@@ -1,0 +1,6 @@
+{
+  "team_name": "Beavers",
+  "team_page_url": "https://www.truenorthhockey.com/Stats/StatsTeamStats?divteamID=736",
+  "game_duration_hours": 1,
+  "output_file": "docs/hockey_schedule.ics"
+}
