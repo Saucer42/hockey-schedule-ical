@@ -30,6 +30,7 @@ with _CONFIG_FILE.open() as _f:
     _cfg = json.load(_f)
 
 TEAM_PAGE_URL       = _cfg["team_page_url"]
+PLAYOFF_PAGE_URL    = _cfg.get("playoff_page_url", "")
 TEAM_NAME           = _cfg["team_name"]
 GAME_DURATION_HOURS = int(_cfg["game_duration_hours"])
 SCHEDULE_ENDPOINT   = "/Schedule/GetTeamScheduleGrid"
@@ -171,6 +172,122 @@ async def _dom_fallback(page) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Playoff scraping
+# ---------------------------------------------------------------------------
+
+# Placeholders used on the playoff page before teams are seeded.
+# Rows where both sides match these patterns are skipped.
+_PLACEHOLDER_RE = re.compile(
+    r"^(\d+(?:st|nd|rd|th)\s+(?:place|Place)|winner\s+g\d+|tbd)$",
+    re.IGNORECASE,
+)
+
+# Matches a game line from the playoff page body text, e.g.:
+#   "Aug 12 08:00 | Rinx 2 | Beavers 5 vs Warriors 0"   (completed, with scores)
+#   "Mar 10 09:30 | Ford PC 2 | 3rd Place vs 5th Place"  (upcoming, no scores)
+# Group 1: date ("Aug 12")
+# Group 2: time ("08:00")
+# Group 3: rink ("Rinx 2")
+# Group 4: home team + optional score ("Beavers 5" or "3rd Place")
+# Group 5: away team + optional score ("Warriors 0" or "5th Place")
+_PLAYOFF_GAME_RE = re.compile(
+    r"([A-Za-z]{3}\s+\d{1,2})\s+(\d{1,2}:\d{2})"   # date + time
+    r"\s*\|\s*([^|]+?)\s*\|"                          # rink
+    r"\s*(.+?)\s+vs\s+(.+?)\s*$",                    # home vs away (rest of line)
+    re.MULTILINE,
+)
+
+# Splits a "Team Name 3" string into (team_name, score_or_empty).
+# Works for both "Beavers 5" and "3rd Place" (no trailing digit → score="").
+_TEAM_SCORE_RE = re.compile(r"^(.*?)\s+(\d+)$")
+
+
+def _parse_playoff_team_score(raw: str) -> tuple[str, str]:
+    """Split 'Team Name 3' into ('Team Name', '3'), or ('Team Name', '') if no score."""
+    m = _TEAM_SCORE_RE.match(raw.strip())
+    if m:
+        return m.group(1).strip(), m.group(2)
+    return raw.strip(), ""
+
+
+def _is_placeholder(name: str) -> bool:
+    return bool(_PLACEHOLDER_RE.match(name.strip()))
+
+
+async def scrape_playoff_schedule(fall_year: int, spring_year: int) -> list[dict]:
+    """
+    Scrape the playoff page for games involving TEAM_NAME.
+
+    The playoff page renders game data as static HTML — no AJAX interception
+    needed. We load the page, read the body text, and parse game lines with
+    a regex. Only rows where at least one team matches TEAM_NAME are kept;
+    rows with placeholder team names (e.g. "3rd Place", "Winner G4") are
+    skipped until real teams are seeded.
+
+    Returns a list of game dicts in the same format as parse_game().
+    """
+    if not PLAYOFF_PAGE_URL:
+        print("[playoff] No playoff_page_url configured — skipping.")
+        return []
+
+    print(f"[playoff] Navigating to {PLAYOFF_PAGE_URL} …")
+    games: list[dict] = []
+
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(headless=True)
+        context = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (X11; Linux x86_64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            )
+        )
+        page = await context.new_page()
+        await page.goto(PLAYOFF_PAGE_URL, wait_until="networkidle", timeout=60_000)
+        await page.wait_for_timeout(3_000)
+        body_text = await page.inner_text("body")
+        await browser.close()
+
+    for m in _PLAYOFF_GAME_RE.finditer(body_text):
+        date_str      = m.group(1).strip()   # "Aug 12"
+        time_str      = m.group(2).strip()   # "08:00"
+        rink          = m.group(3).strip()   # "Rinx 2"
+        home_raw      = m.group(4).strip()   # "Beavers 5" or "3rd Place"
+        away_raw      = m.group(5).strip()   # "Warriors 0" or "5th Place"
+
+        home_team, home_score = _parse_playoff_team_score(home_raw)
+        away_team, away_score = _parse_playoff_team_score(away_raw)
+
+        # Skip rows where both teams are still placeholders
+        if _is_placeholder(home_team) and _is_placeholder(away_team):
+            continue
+
+        # Skip rows that don't involve our team at all
+        team_lower = TEAM_NAME.lower()
+        if home_team.lower() != team_lower and away_team.lower() != team_lower:
+            continue
+
+        naive_dt = _parse_datetime(date_str, time_str, fall_year, spring_year)
+        if naive_dt is None:
+            print(f"[playoff] Could not parse date/time: '{date_str} {time_str}' — skipping.")
+            continue
+
+        aware_dt = naive_dt.replace(tzinfo=EASTERN_TZ)
+        games.append({
+            "datetime":   aware_dt,
+            "rink":       rink,
+            "home_team":  home_team,
+            "away_team":  away_team,
+            "home_score": home_score,
+            "away_score": away_score,
+            "playoff":    True,
+        })
+
+    print(f"[playoff] Found {len(games)} {TEAM_NAME} game(s).")
+    return games
+
+
+# ---------------------------------------------------------------------------
 # Parsing
 # ---------------------------------------------------------------------------
 
@@ -305,11 +422,13 @@ def _event_title(game: dict) -> str:
     away = game["away_team"] or "Away"
     rink = game["rink"]
 
+    prefix = "[Playoff] " if game.get("playoff") else ""
+
     # Put our team first, indicate whether home or away
     if away.strip().lower() == TEAM_NAME.lower():
-        title = f"{TEAM_NAME} @ {home}"
+        title = f"{prefix}{TEAM_NAME} @ {home}"
     else:
-        title = f"{TEAM_NAME} vs {away}"
+        title = f"{prefix}{TEAM_NAME} vs {away}"
 
     if rink:
         title += f" | {rink}"
@@ -389,13 +508,18 @@ async def main() -> None:
         g for raw in raw_games
         if (g := parse_game(raw, fall_year, spring_year)) is not None
     ]
-    print(f"[parser] {len(games)} games successfully parsed.")
+    print(f"[parser] {len(games)} regular-season games successfully parsed.")
 
     if not games:
         print("ERROR: Parsing produced no valid games.")
         sys.exit(1)
 
-    # Sort chronologically
+    # Merge playoff games (skipped gracefully if playoff_page_url is empty)
+    print()
+    playoff_games = await scrape_playoff_schedule(fall_year, spring_year)
+    games.extend(playoff_games)
+
+    # Sort all games chronologically
     games.sort(key=lambda g: g["datetime"])
 
     print(f"\n[ical] Writing {len(games)} events to {OUTPUT_FILE} …")

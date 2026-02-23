@@ -235,6 +235,60 @@ Finally, `cal.to_ical()` converts the whole thing into the `.ics` text format an
 
 ---
 
+## How Playoff Games Are Handled
+
+### Why playoffs are different
+
+The regular season schedule is loaded by the True North Hockey website using a hidden background request (AJAX). The playoff schedule works completely differently — all the game information is written directly into the page as plain text by the server. There's no hidden request to intercept.
+
+A playoff game row looks like this in the page:
+```
+Aug 12 08:00 | Rinx 2 | Beavers 5 vs Warriors 0
+```
+
+Before the playoff bracket is drawn, team names are replaced with placeholders:
+```
+Mar 10 09:30 | Ford PC 2 | 3rd Place vs 5th Place
+```
+
+### What the scraper does with playoffs
+
+The scraper visits the playoff page separately, reads all the text on the page, and picks out lines that look like game entries. It then applies two filters:
+
+1. **Only Beavers games** — it keeps only rows where "Beavers" appears as one of the teams. All other games are ignored.
+2. **Skip placeholders** — it ignores rows where both teams are still listed as "3rd Place", "Winner G4", etc. Once real team names are filled in by the website, those games will automatically appear in the calendar on the next nightly run.
+
+Playoff games show up in your calendar with a `[Playoff]` label in the title so they're easy to tell apart:
+```
+[Playoff] Beavers vs Boilers | Ford PC 3
+```
+
+### How to set up the playoff URL
+
+The playoff URL is stored in `config.json` under `"playoff_page_url"`. Each season, True North Hockey creates a new playoff page with a different number (the `divisionInstanceId`).
+
+**To update it:**
+
+**Step 1** — When playoffs are announced, go to your division's playoff page on True North Hockey. The URL will look like:
+```
+https://www.truenorthhockey.com/Schedule/PlayoffSchedule?divisionInstanceId=153
+```
+
+**Step 2** — Open `config.json` and find:
+```json
+"playoff_page_url": "https://www.truenorthhockey.com/Schedule/PlayoffSchedule?divisionInstanceId=153",
+```
+
+**Step 3** — Replace the number after `divisionInstanceId=` with the new season's number. Save the file.
+
+**To disable playoff scraping** (e.g. during the off-season when no playoff page exists yet), set the value to empty quotes:
+```json
+"playoff_page_url": "",
+```
+The scraper will silently skip the playoff step and only include regular season games.
+
+---
+
 ## How to Change the URL for a New Season
 
 At the start of each new season, True North Hockey assigns your team a new page URL with a different `divteamID` number. Here's how to update the project:
