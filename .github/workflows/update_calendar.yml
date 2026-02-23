@@ -1,0 +1,45 @@
+name: Update Hockey Calendar
+
+on:
+  schedule:
+    # 07:00 UTC = 02:00 ET (03:00 EDT). Runs nightly so the calendar
+    # stays current even as scores/rink info get filled in post-game.
+    - cron: "0 7 * * *"
+  workflow_dispatch: # Allow manual trigger from the Actions tab
+
+permissions:
+  contents: write   # Required to commit and push the updated .ics file
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      - name: Run schedule scraper
+        run: python scraper.py
+
+      - name: Commit and push updated calendar
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/hockey_schedule.ics
+          # Only commit if the file actually changed
+          git diff --cached --quiet \
+            && echo "No changes to commit." \
+            || git commit -m "chore: update hockey schedule [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push

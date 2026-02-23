@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Playwright
+playwright/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code (keep launch.json if desired, exclude local settings)
+.vscode/settings.json
+.vscode/*.log
