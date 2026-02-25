@@ -207,7 +207,8 @@ SUMMARY:Beavers @ Olde Guns | Ford PC 2
 DTSTART;TZID=America/Toronto:20260224T203000
 DTEND;TZID=America/Toronto:20260224T213000
 UID:20260224T203000-Olde_Guns-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Olde Guns\nAway: Beavers\nRink: Ford PC 2
+DESCRIPTION:Home: Olde Guns\nAway: Beavers\nFinal: Olde Guns 1 – 6 Beave
+ rs\nRink: Ford PC 2
 LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
