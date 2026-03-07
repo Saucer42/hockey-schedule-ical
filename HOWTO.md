@@ -243,13 +243,15 @@ The regular season schedule is loaded by the True North Hockey website using a h
 
 A playoff game row looks like this in the page:
 ```
-Aug 12 08:00 | Rinx 2 | Beavers 5 vs Warriors 0
+Aug 12 20:00 | Rinx 2 | Beavers 5 vs Warriors 0
 ```
 
 Before the playoff bracket is drawn, team names are replaced with placeholders:
 ```
-Mar 10 09:30 | Ford PC 2 | 3rd Place vs 5th Place
+Mar 10 21:30 | Ford PC 2 | 3rd Place vs 5th Place
 ```
+
+> **Note:** The playoff page lists times without an AM/PM indicator (e.g. `20:00` instead of `8:00 PM`). The scraper assumes all playoff games are in the **evening (PM)**. This matches how True North Hockey schedules games and means calendar events will always show the correct evening time.
 
 ### What the scraper does with playoffs
 

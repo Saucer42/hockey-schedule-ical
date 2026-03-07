@@ -82,7 +82,9 @@ Requires Python 3.11+.
 ├── docs/
 │   └── hockey_schedule.ics       # Generated calendar feed (GitHub Pages root)
 ├── scraper.py                    # Playwright scraper + iCal generator
+├── config.json                   # User-editable settings (team name, URLs, duration)
 ├── requirements.txt
+├── HOWTO.md                      # Plain-English guide for non-technical maintainers
 └── README.md
 ```
 
@@ -111,6 +113,7 @@ All user-editable settings live in **`config.json`** at the project root. Edit t
 |---|---|---|
 | Team name displayed in event titles | `team_name` | `Beavers` |
 | Source page URL (update each season) | `team_page_url` | True North Hockey team page |
+| Playoff bracket page URL | `playoff_page_url` | True North Hockey playoff page (set to `""` to disable) |
 | Game duration | `game_duration_hours` | `1` hour |
 | Output file name | `output_file` | `docs/hockey_schedule.ics` |
 | Workflow run time | `update_calendar.yml` → `cron` | `0 7 * * *` (2 AM ET) |
