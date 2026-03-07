@@ -232,6 +232,9 @@ def _parse_playoff_lines(lines: list[str], fall_year: int, spring_year: int) -> 
 
         date_str = m.group(1)  # "Mar 17"
         time_str = m.group(2)  # "10:30"
+        # Playoff page omits AM/PM; all games are in the evening, so force PM.
+        if not re.search(r"[AaPp][Mm]", time_str):
+            time_str += " PM"
 
         # --- Home team: scan backwards past the seed line ---
         j = i - 1
