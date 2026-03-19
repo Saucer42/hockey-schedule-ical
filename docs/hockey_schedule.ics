@@ -221,14 +221,6 @@ DESCRIPTION:Home: Icemans\nAway: Beavers\nFinal: Icemans 3 – 6 Beavers\n
 LOCATION:Rinx 4
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers vs TO Mighty Drunks | Ford PC 2
-DTSTART;TZID=America/Toronto:20260317T223000
-DTEND;TZID=America/Toronto:20260317T233000
-UID:20260317T223000-Beavers-TO_Mighty_Drunks@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: TO Mighty Drunks\nRink: Ford PC 2
-LOCATION:Ford PC 2
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[Playoff] Beavers vs Olde Guns | Ford PC 3
 DTSTART;TZID=America/Toronto:20260324T203000
 DTEND;TZID=America/Toronto:20260324T213000
