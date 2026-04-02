@@ -220,12 +220,4 @@ DESCRIPTION:Home: Icemans\nAway: Beavers\nFinal: Icemans 3 – 6 Beavers\n
  Rink: Rinx 4
 LOCATION:Rinx 4
 END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ Saucers | Ford PC 3
-DTSTART;TZID=America/Toronto:20260331T213000
-DTEND;TZID=America/Toronto:20260331T223000
-UID:20260331T213000-Saucers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Saucers\nAway: Beavers\nRink: Ford PC 3
-LOCATION:Ford PC 3
-END:VEVENT
 END:VCALENDAR
