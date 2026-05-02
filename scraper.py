@@ -436,6 +436,10 @@ def parse_game(raw: dict, fall_year: int, spring_year: int) -> dict | None:
         print(f"[parser] Skipping record with no date: {raw}")
         return None
 
+    # API omits AM/PM; all games are in the evening, so force PM when absent.
+    if time_str and not re.search(r"[AaPp][Mm]", time_str):
+        time_str += " PM"
+
     naive_dt = _parse_datetime(date_str, time_str, fall_year, spring_year)
     if naive_dt is None:
         print(f"[parser] Could not parse date: '{date_str}' (time: '{time_str}')")
