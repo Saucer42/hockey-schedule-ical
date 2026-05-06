@@ -11,7 +11,8 @@ SUMMARY:Beavers vs Windows 95 | Rinx 2
 DTSTART;TZID=America/Toronto:20260505T190000
 DTEND;TZID=America/Toronto:20260505T200000
 UID:20260505T190000-Beavers-Windows_95@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Windows 95\nRink: Rinx 2
+DESCRIPTION:Home: Beavers\nAway: Windows 95\nFinal: Beavers 5 – 5 Window
+ s 95\nRink: Rinx 2
 LOCATION:Rinx 2
 END:VEVENT
 BEGIN:VEVENT
