@@ -20,7 +20,8 @@ SUMMARY:Beavers @ Puck Bunnies | Ford PC 1
 DTSTART;TZID=America/Toronto:20260512T214500
 DTEND;TZID=America/Toronto:20260512T224500
 UID:20260512T214500-Puck_Bunnies-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Puck Bunnies\nAway: Beavers\nRink: Ford PC 1
+DESCRIPTION:Home: Puck Bunnies\nAway: Beavers\nFinal: Puck Bunnies 4 – 2
+  Beavers\nRink: Ford PC 1
 LOCATION:Ford PC 1
 END:VEVENT
 BEGIN:VEVENT
