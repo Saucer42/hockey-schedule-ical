@@ -38,7 +38,8 @@ SUMMARY:Beavers @ Boilers | Rinx 3
 DTSTART;TZID=America/Toronto:20260526T211500
 DTEND;TZID=America/Toronto:20260526T221500
 UID:20260526T211500-Boilers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Rinx 3
+DESCRIPTION:Home: Boilers\nAway: Beavers\nFinal: Boilers 3 – 1 Beavers\n
+ Rink: Rinx 3
 LOCATION:Rinx 3
 END:VEVENT
 BEGIN:VEVENT
