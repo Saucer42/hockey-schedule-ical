@@ -47,7 +47,8 @@ SUMMARY:Beavers vs Goalslaw | Rinx 3
 DTSTART;TZID=America/Toronto:20260602T221500
 DTEND;TZID=America/Toronto:20260602T231500
 UID:20260602T221500-Beavers-Goalslaw@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Goalslaw\nRink: Rinx 3
+DESCRIPTION:Home: Beavers\nAway: Goalslaw\nFinal: Beavers 1 – 1 Goalslaw
+ \nRink: Rinx 3
 LOCATION:Rinx 3
 END:VEVENT
 BEGIN:VEVENT
