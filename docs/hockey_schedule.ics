@@ -119,7 +119,8 @@ SUMMARY:Beavers vs Saucers | Rinx 2
 DTSTART;TZID=America/Toronto:20260728T200000
 DTEND;TZID=America/Toronto:20260728T210000
 UID:20260728T200000-Beavers-Saucers@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Saucers\nRink: Rinx 2
+DESCRIPTION:Home: Beavers\nAway: Saucers\nFinal: Beavers 3 – 5 Saucers\n
+ Rink: Rinx 2
 LOCATION:Rinx 2
 END:VEVENT
 END:VCALENDAR
