@@ -124,14 +124,6 @@ DESCRIPTION:Home: Beavers\nAway: Saucers\nFinal: Beavers 3 – 5 Saucers\n
 LOCATION:Rinx 2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers vs Boilers | Ford PC 1
-DTSTART;TZID=America/Toronto:20260804T204500
-DTEND;TZID=America/Toronto:20260804T214500
-UID:20260804T204500-Beavers-Boilers@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Boilers\nRink: Ford PC 1
-LOCATION:Ford PC 1
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[Playoff] Beavers @ Goalslaw | Ford PC 1
 DTSTART;TZID=America/Toronto:20260818T204500
 DTEND;TZID=America/Toronto:20260818T214500
