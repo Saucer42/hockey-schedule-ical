@@ -124,11 +124,19 @@ DESCRIPTION:Home: Beavers\nAway: Saucers\nFinal: Beavers 3 – 5 Saucers\n
 LOCATION:Rinx 2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ Goalslaw | Ford PC 1
+SUMMARY:[Playoff] Beavers @ 5 | Ford PC 1
 DTSTART;TZID=America/Toronto:20260818T204500
 DTEND;TZID=America/Toronto:20260818T214500
-UID:20260818T204500-Goalslaw-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Goalslaw\nAway: Beavers\nRink: Ford PC 1
+UID:20260818T204500-5-Beavers@truenorthhockey.com
+DESCRIPTION:Home: 5\nAway: Beavers\nRink: Ford PC 1
 LOCATION:Ford PC 1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Playoff] Beavers @ Goalslaw | Ford PC 3
+DTSTART;TZID=America/Toronto:20260825T203000
+DTEND;TZID=America/Toronto:20260825T213000
+UID:20260825T203000-Goalslaw-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Goalslaw\nAway: Beavers\nRink: Ford PC 3
+LOCATION:Ford PC 3
 END:VEVENT
 END:VCALENDAR
