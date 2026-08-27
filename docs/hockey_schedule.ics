@@ -7,6 +7,14 @@ X-WR-CALDESC:Game schedule for the Beavers – True North Hockey.
 X-WR-CALNAME:Beavers Hockey Schedule
 X-WR-TIMEZONE:America/Toronto
 BEGIN:VEVENT
+SUMMARY:[Playoff] Beavers @ Boilers | Rinx 3
+DTSTART;TZID=America/Toronto:20250901T191500
+DTEND;TZID=America/Toronto:20250901T201500
+UID:20250901T191500-Boilers-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Rinx 3
+LOCATION:Rinx 3
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Beavers vs Windows 95 | Rinx 2
 DTSTART;TZID=America/Toronto:20260505T190000
 DTEND;TZID=America/Toronto:20260505T200000
@@ -132,11 +140,11 @@ DESCRIPTION:Home: 5\nAway: Beavers\nRink: Ford PC 1
 LOCATION:Ford PC 1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ Goalslaw | Ford PC 3
+SUMMARY:[Playoff] Beavers @ 0 | Ford PC 3
 DTSTART;TZID=America/Toronto:20260825T203000
 DTEND;TZID=America/Toronto:20260825T213000
-UID:20260825T203000-Goalslaw-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Goalslaw\nAway: Beavers\nRink: Ford PC 3
+UID:20260825T203000-0-Beavers@truenorthhockey.com
+DESCRIPTION:Home: 0\nAway: Beavers\nRink: Ford PC 3
 LOCATION:Ford PC 3
 END:VEVENT
 END:VCALENDAR
