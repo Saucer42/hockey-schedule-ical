@@ -7,11 +7,11 @@ X-WR-CALDESC:Game schedule for the Beavers – True North Hockey.
 X-WR-CALNAME:Beavers Hockey Schedule
 X-WR-TIMEZONE:America/Toronto
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ Boilers | Rinx 3
+SUMMARY:[Playoff] Beavers @ 2 | Rinx 3
 DTSTART;TZID=America/Toronto:20260901T191500
 DTEND;TZID=America/Toronto:20260901T201500
-UID:20260901T191500-Boilers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Rinx 3
+UID:20260901T191500-2-Beavers@truenorthhockey.com
+DESCRIPTION:Home: 2\nAway: Beavers\nRink: Rinx 3
 LOCATION:Rinx 3
 END:VEVENT
 BEGIN:VEVENT
