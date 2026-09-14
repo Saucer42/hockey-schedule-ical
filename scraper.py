@@ -58,7 +58,10 @@ async def scrape_schedule() -> tuple[list[dict], int, int]:
     spring_year: int | None = None
 
     async with async_playwright() as pw:
-        browser = await pw.chromium.launch(headless=True)
+        browser = await pw.chromium.launch(
+            headless=True,
+            executable_path="/opt/pw-browsers/chromium"
+        )
         context = await browser.new_context(
             user_agent=(
                 "Mozilla/5.0 (X11; Linux x86_64) "
@@ -306,7 +309,10 @@ async def scrape_playoff_schedule(fall_year: int, spring_year: int) -> list[dict
     games: list[dict] = []
 
     async with async_playwright() as pw:
-        browser = await pw.chromium.launch(headless=True)
+        browser = await pw.chromium.launch(
+            headless=True,
+            executable_path="/opt/pw-browsers/chromium"
+        )
         context = await browser.new_context(
             user_agent=(
                 "Mozilla/5.0 (X11; Linux x86_64) "
