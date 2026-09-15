@@ -7,144 +7,59 @@ X-WR-CALDESC:Game schedule for the Beavers – True North Hockey.
 X-WR-CALNAME:Beavers Hockey Schedule
 X-WR-TIMEZONE:America/Toronto
 BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ 2 | Rinx 3
-DTSTART;TZID=America/Toronto:20260901T191500
-DTEND;TZID=America/Toronto:20260901T201500
-UID:20260901T191500-2-Beavers@truenorthhockey.com
-DESCRIPTION:Home: 2\nAway: Beavers\nRink: Rinx 3
-LOCATION:Rinx 3
+SUMMARY:Beavers vs Boilers | Rinx 1
+DTSTART;TZID=America/Toronto:20260915T201500
+DTEND;TZID=America/Toronto:20260915T211500
+UID:20260915T201500-Beavers-Boilers@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Boilers\nRink: Rinx 1
+LOCATION:Rinx 1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beavers vs Windows 95 | Rinx 2
-DTSTART;TZID=America/Toronto:20270505T190000
-DTEND;TZID=America/Toronto:20270505T200000
-UID:20270505T190000-Beavers-Windows_95@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Windows 95\nFinal: Beavers 5 – 5 Window
- s 95\nRink: Rinx 2
+SUMMARY:Beavers vs Whiskey Dekes | Ford PC 3
+DTSTART;TZID=America/Toronto:20260922T223000
+DTEND;TZID=America/Toronto:20260922T233000
+UID:20260922T223000-Beavers-Whiskey_Dekes@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Whiskey Dekes\nRink: Ford PC 3
+LOCATION:Ford PC 3
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers @ Icemans | Rinx 2
+DTSTART;TZID=America/Toronto:20260929T213000
+DTEND;TZID=America/Toronto:20260929T223000
+UID:20260929T213000-Icemans-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Icemans\nAway: Beavers\nRink: Rinx 2
 LOCATION:Rinx 2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beavers @ Puck Bunnies | Ford PC 1
-DTSTART;TZID=America/Toronto:20270512T214500
-DTEND;TZID=America/Toronto:20270512T224500
-UID:20270512T214500-Puck_Bunnies-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Puck Bunnies\nAway: Beavers\nFinal: Puck Bunnies 4 – 2
-  Beavers\nRink: Ford PC 1
-LOCATION:Ford PC 1
+SUMMARY:Beavers @ St Pats | Ford PC 2
+DTSTART;TZID=America/Toronto:20261006T223000
+DTEND;TZID=America/Toronto:20261006T233000
+UID:20261006T223000-St_Pats-Beavers@truenorthhockey.com
+DESCRIPTION:Home: St Pats\nAway: Beavers\nRink: Ford PC 2
+LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beavers vs Saucers | Rinx 2
-DTSTART;TZID=America/Toronto:20270519T200000
-DTEND;TZID=America/Toronto:20270519T210000
-UID:20270519T200000-Beavers-Saucers@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Saucers\nFinal: Beavers 5 – 7 Saucers\n
- Rink: Rinx 2
-LOCATION:Rinx 2
+SUMMARY:Beavers vs Roadkill | Ford PC 2
+DTSTART;TZID=America/Toronto:20261013T193000
+DTEND;TZID=America/Toronto:20261013T203000
+UID:20261013T193000-Beavers-Roadkill@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Roadkill\nRink: Ford PC 2
+LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beavers @ Boilers | Rinx 3
-DTSTART;TZID=America/Toronto:20270526T211500
-DTEND;TZID=America/Toronto:20270526T221500
-UID:20270526T211500-Boilers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Boilers\nAway: Beavers\nFinal: Boilers 3 – 1 Beavers\n
- Rink: Rinx 3
-LOCATION:Rinx 3
+SUMMARY:Beavers @ Roadkill | Bye Week
+DTSTART;TZID=America/Toronto:20261020T120000
+DTEND;TZID=America/Toronto:20261020T130000
+UID:20261020T120000-Roadkill-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Roadkill\nAway: Beavers\nRink: Bye Week
+LOCATION:Bye Week
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beavers vs Goalslaw | Rinx 3
-DTSTART;TZID=America/Toronto:20270602T221500
-DTEND;TZID=America/Toronto:20270602T231500
-UID:20270602T221500-Beavers-Goalslaw@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Goalslaw\nFinal: Beavers 1 – 1 Goalslaw
- \nRink: Rinx 3
-LOCATION:Rinx 3
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers @ Windows 95 | Rinx 2
-DTSTART;TZID=America/Toronto:20270609T190000
-DTEND;TZID=America/Toronto:20270609T200000
-UID:20270609T190000-Windows_95-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Windows 95\nAway: Beavers\nFinal: Windows 95 7 – 3 Bea
- vers\nRink: Rinx 2
-LOCATION:Rinx 2
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers vs Puck Bunnies | Ford PC 1
-DTSTART;TZID=America/Toronto:20270616T194500
-DTEND;TZID=America/Toronto:20270616T204500
-UID:20270616T194500-Beavers-Puck_Bunnies@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Puck Bunnies\nFinal: Beavers 3 – 4 Puck
-  Bunnies\nRink: Ford PC 1
-LOCATION:Ford PC 1
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers @ Saucers | Rinx 2
-DTSTART;TZID=America/Toronto:20270623T200000
-DTEND;TZID=America/Toronto:20270623T210000
-UID:20270623T200000-Saucers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Saucers\nAway: Beavers\nFinal: Saucers 3 – 5 Beavers\n
- Rink: Rinx 2
-LOCATION:Rinx 2
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers vs Boilers | Rinx 3
-DTSTART;TZID=America/Toronto:20270630T211500
-DTEND;TZID=America/Toronto:20270630T221500
-UID:20270630T211500-Beavers-Boilers@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Boilers\nFinal: Beavers 5 – 3 Boilers\n
- Rink: Rinx 3
-LOCATION:Rinx 3
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers @ Goalslaw | Rinx 3
-DTSTART;TZID=America/Toronto:20270707T221500
-DTEND;TZID=America/Toronto:20270707T231500
-UID:20270707T221500-Goalslaw-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Goalslaw\nAway: Beavers\nFinal: Goalslaw 3 – 2 Beavers
- \nRink: Rinx 3
-LOCATION:Rinx 3
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers vs Windows 95 | Rinx 2
-DTSTART;TZID=America/Toronto:20270714T190000
-DTEND;TZID=America/Toronto:20270714T200000
-UID:20270714T190000-Beavers-Windows_95@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Windows 95\nFinal: Beavers 3 – 3 Window
- s 95\nRink: Rinx 2
-LOCATION:Rinx 2
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers @ Puck Bunnies | Ford PC 1
-DTSTART;TZID=America/Toronto:20270721T204500
-DTEND;TZID=America/Toronto:20270721T214500
-UID:20270721T204500-Puck_Bunnies-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Puck Bunnies\nAway: Beavers\nFinal: Puck Bunnies 4 – 2
-  Beavers\nRink: Ford PC 1
-LOCATION:Ford PC 1
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Beavers vs Saucers | Rinx 2
-DTSTART;TZID=America/Toronto:20270728T200000
-DTEND;TZID=America/Toronto:20270728T210000
-UID:20270728T200000-Beavers-Saucers@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Saucers\nFinal: Beavers 3 – 5 Saucers\n
- Rink: Rinx 2
-LOCATION:Rinx 2
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ 5 | Ford PC 1
-DTSTART;TZID=America/Toronto:20270818T204500
-DTEND;TZID=America/Toronto:20270818T214500
-UID:20270818T204500-5-Beavers@truenorthhockey.com
-DESCRIPTION:Home: 5\nAway: Beavers\nRink: Ford PC 1
-LOCATION:Ford PC 1
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[Playoff] Beavers @ 0 | Ford PC 3
-DTSTART;TZID=America/Toronto:20270825T203000
-DTEND;TZID=America/Toronto:20270825T213000
-UID:20270825T203000-0-Beavers@truenorthhockey.com
-DESCRIPTION:Home: 0\nAway: Beavers\nRink: Ford PC 3
+SUMMARY:Beavers @ Boilers | Ford PC 3
+DTSTART;TZID=America/Toronto:20261027T213000
+DTEND;TZID=America/Toronto:20261027T223000
+UID:20261027T213000-Boilers-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Ford PC 3
 LOCATION:Ford PC 3
 END:VEVENT
 END:VCALENDAR
