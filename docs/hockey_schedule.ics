@@ -20,7 +20,8 @@ SUMMARY:Beavers vs Whiskey Dekes | Ford PC 3
 DTSTART;TZID=America/Toronto:20260922T223000
 DTEND;TZID=America/Toronto:20260922T233000
 UID:20260922T223000-Beavers-Whiskey_Dekes@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Whiskey Dekes\nRink: Ford PC 3
+DESCRIPTION:Home: Beavers\nAway: Whiskey Dekes\nFinal: Beavers 4 – 6 Whi
+ skey Dekes\nRink: Ford PC 3
 LOCATION:Ford PC 3
 END:VEVENT
 BEGIN:VEVENT
