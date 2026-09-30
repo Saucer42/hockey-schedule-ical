@@ -29,7 +29,8 @@ SUMMARY:Beavers @ Icemans | Rinx 2
 DTSTART;TZID=America/Toronto:20260929T213000
 DTEND;TZID=America/Toronto:20260929T223000
 UID:20260929T213000-Icemans-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Icemans\nAway: Beavers\nRink: Rinx 2
+DESCRIPTION:Home: Icemans\nAway: Beavers\nFinal: Icemans 4 – 2 Beavers\n
+ Rink: Rinx 2
 LOCATION:Rinx 2
 END:VEVENT
 BEGIN:VEVENT
