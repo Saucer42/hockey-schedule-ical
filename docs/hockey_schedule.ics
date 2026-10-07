@@ -38,7 +38,8 @@ SUMMARY:Beavers @ St Pats | Ford PC 2
 DTSTART;TZID=America/Toronto:20261006T223000
 DTEND;TZID=America/Toronto:20261006T233000
 UID:20261006T223000-St_Pats-Beavers@truenorthhockey.com
-DESCRIPTION:Home: St Pats\nAway: Beavers\nRink: Ford PC 2
+DESCRIPTION:Home: St Pats\nAway: Beavers\nFinal: St Pats 3 – 6 Beavers\n
+ Rink: Ford PC 2
 LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
