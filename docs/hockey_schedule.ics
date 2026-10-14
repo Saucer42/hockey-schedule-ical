@@ -47,7 +47,8 @@ SUMMARY:Beavers vs Roadkill | Ford PC 2
 DTSTART;TZID=America/Toronto:20261013T193000
 DTEND;TZID=America/Toronto:20261013T203000
 UID:20261013T193000-Beavers-Roadkill@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Roadkill\nRink: Ford PC 2
+DESCRIPTION:Home: Beavers\nAway: Roadkill\nFinal: Beavers 5 – 0 Roadkill
+ \nRink: Ford PC 2
 LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
