@@ -67,4 +67,60 @@ UID:20261027T213000-Boilers-Beavers@truenorthhockey.com
 DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Ford PC 3
 LOCATION:Ford PC 3
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers @ St Pats | Rinx 1
+DTSTART;TZID=America/Toronto:20261103T201500
+DTEND;TZID=America/Toronto:20261103T211500
+UID:20261103T201500-St_Pats-Beavers@truenorthhockey.com
+DESCRIPTION:Home: St Pats\nAway: Beavers\nRink: Rinx 1
+LOCATION:Rinx 1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers @ Icemans | Rinx 3
+DTSTART;TZID=America/Toronto:20261110T231500
+DTEND;TZID=America/Toronto:20261111T001500
+UID:20261110T231500-Icemans-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Icemans\nAway: Beavers\nRink: Rinx 3
+LOCATION:Rinx 3
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers vs Big O's | Ford PC 2
+DTSTART;TZID=America/Toronto:20261117T213000
+DTEND;TZID=America/Toronto:20261117T223000
+UID:20261117T213000-Beavers-Big_O's@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Big O's\nRink: Ford PC 2
+LOCATION:Ford PC 2
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers vs Warriors | Rinx 1
+DTSTART;TZID=America/Toronto:20261124T221500
+DTEND;TZID=America/Toronto:20261124T231500
+UID:20261124T221500-Beavers-Warriors@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Warriors\nRink: Rinx 1
+LOCATION:Rinx 1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers @ Boilers | Rinx 3
+DTSTART;TZID=America/Toronto:20261201T211500
+DTEND;TZID=America/Toronto:20261201T221500
+UID:20261201T211500-Boilers-Beavers@truenorthhockey.com
+DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Rinx 3
+LOCATION:Rinx 3
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers vs Icemans | Bye Week
+DTSTART;TZID=America/Toronto:20261208T120000
+DTEND;TZID=America/Toronto:20261208T130000
+UID:20261208T120000-Beavers-Icemans@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: Icemans\nRink: Bye Week
+LOCATION:Bye Week
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beavers vs St Pats | Rinx 4
+DTSTART;TZID=America/Toronto:20261215T220000
+DTEND;TZID=America/Toronto:20261215T230000
+UID:20261215T220000-Beavers-St_Pats@truenorthhockey.com
+DESCRIPTION:Home: Beavers\nAway: St Pats\nRink: Rinx 4
+LOCATION:Rinx 4
+END:VEVENT
 END:VCALENDAR
