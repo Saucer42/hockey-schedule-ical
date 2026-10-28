@@ -64,7 +64,8 @@ SUMMARY:Beavers @ Boilers | Ford PC 3
 DTSTART;TZID=America/Toronto:20261027T213000
 DTEND;TZID=America/Toronto:20261027T223000
 UID:20261027T213000-Boilers-Beavers@truenorthhockey.com
-DESCRIPTION:Home: Boilers\nAway: Beavers\nRink: Ford PC 3
+DESCRIPTION:Home: Boilers\nAway: Beavers\nFinal: Boilers 5 – 1 Beavers\n
+ Rink: Ford PC 3
 LOCATION:Ford PC 3
 END:VEVENT
 BEGIN:VEVENT
