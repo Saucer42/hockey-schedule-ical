@@ -73,7 +73,8 @@ SUMMARY:Beavers @ St Pats | Rinx 1
 DTSTART;TZID=America/Toronto:20261103T201500
 DTEND;TZID=America/Toronto:20261103T211500
 UID:20261103T201500-St_Pats-Beavers@truenorthhockey.com
-DESCRIPTION:Home: St Pats\nAway: Beavers\nRink: Rinx 1
+DESCRIPTION:Home: St Pats\nAway: Beavers\nFinal: St Pats 2 – 5 Beavers\n
+ Rink: Rinx 1
 LOCATION:Rinx 1
 END:VEVENT
 BEGIN:VEVENT
