@@ -91,7 +91,8 @@ SUMMARY:Beavers vs Big O's | Ford PC 2
 DTSTART;TZID=America/Toronto:20261117T213000
 DTEND;TZID=America/Toronto:20261117T223000
 UID:20261117T213000-Beavers-Big_O's@truenorthhockey.com
-DESCRIPTION:Home: Beavers\nAway: Big O's\nRink: Ford PC 2
+DESCRIPTION:Home: Beavers\nAway: Big O's\nFinal: Beavers 5 – 5 Big O's\n
+ Rink: Ford PC 2
 LOCATION:Ford PC 2
 END:VEVENT
 BEGIN:VEVENT
